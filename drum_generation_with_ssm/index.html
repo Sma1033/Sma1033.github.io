@@ -12080,9 +12080,158 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Controllable-Rhythm-complexity">Controllable Rhythm complexity<a class="anchor-link" href="#Controllable-Rhythm-complexity">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As described in section 3.4, we use $\hat c$ in drum VAE latent space to represent the note density (rhythm complexity) of the VAE model output. Adding a number to $\hat c$ in latent space changes the output note count and therefor make the generation result more diverse. In the following examples, we demonstrate the effect of replacing $\hat c$ with $\hat c + \alpha$  ($\alpha = \{6,20\}$) on two different songs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font size="4"><b>Example 1</b></font> 
+<img src="./adj_chat_sample/fig_adj_c_00244.png" alt="Drag Racing"></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;p class=&quot;sample&quot;&gt;
+    &amp;nbsp;
+    &lt;pre&gt;&lt;b&gt;            (1) OMD                        (2) PDS                        (3) PDS(+6)                     (4)PDS(+20)&lt;/b&gt;&lt;/pre&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_00244_omd.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_00244_pds.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_00244_pds_p06n.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_00244_pds_p20n.wav&quot;  controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+&lt;/p&gt;
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<p class="sample">
+    &nbsp;
+    <pre><b>            (1) OMD                        (2) PDS                        (3) PDS(+6)                     (4)PDS(+20)</b></pre>
+    <audio src="./adj_chat_sample/audio_00244_omd.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_00244_pds.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_00244_pds_p06n.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_00244_pds_p20n.wav"  controls="" style="width: 240px;"></audio>
+</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font size="4"><b>Example 2</b></font> 
+<img src="./adj_chat_sample/fig_adj_c_07942.png" alt="Drag Racing"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;p class=&quot;sample&quot;&gt;
+    &amp;nbsp;
+    &lt;pre&gt;&lt;b&gt;            (1) OMD                        (2) PDS                        (3) PDS(+6)                     (4)PDS(+20)&lt;/b&gt;&lt;/pre&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_07942_omd.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_07942_pds.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_07942_pds_p06n.wav&quot; controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./adj_chat_sample/audio_07942_pds_p20n.wav&quot;  controls=&quot;&quot; style=&quot;width: 240px;&quot;&gt;&lt;/audio&gt;
+&lt;/p&gt;
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<p class="sample">
+    &nbsp;
+    <pre><b>            (1) OMD                        (2) PDS                        (3) PDS(+6)                     (4)PDS(+20)</b></pre>
+    <audio src="./adj_chat_sample/audio_07942_omd.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_07942_pds.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_07942_pds_p06n.wav" controls="" style="width: 240px;"></audio>
+    <audio src="./adj_chat_sample/audio_07942_pds_p20n.wav"  controls="" style="width: 240px;"></audio>
+</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#&lt;font size=&quot;1&quot;&gt; This is my text number 1&lt;/font&gt;&lt;br&gt;</span>
+<span class="c1">#&lt;font size=&quot;2&quot;&gt; This is my text number 2&lt;/font&gt;&lt;br&gt;</span>
+<span class="c1">#&lt;font size=&quot;3&quot;&gt; This is my text number 3&lt;/font&gt;&lt;br&gt;</span>
+<span class="c1">#&lt;font size=&quot;4&quot;&gt; This is my text number 4&lt;/font&gt;&lt;br&gt;</span>
+<span class="c1">#&lt;font size=&quot;5&quot;&gt; This is my text number 5&lt;/font&gt;&lt;br&gt;</span>
+<span class="c1">#&lt;font size=&quot;6&quot;&gt; This is my text number 6&lt;/font&gt;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#wav_file = &quot;./testing_10_songs/test_wavs_cutted/test_song_01.wav&quot;</span>
@@ -12109,7 +12258,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ipd.Audio(audio_data[:44100*5], rate=44100)</span>
@@ -12123,7 +12272,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#my_video = YouTubeVideo(&#39;FQw2CX6bn7Q&#39;)</span>
@@ -12136,7 +12285,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#display(my_video)</span>
@@ -12149,7 +12298,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert nb file into html</span>
@@ -12162,7 +12311,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html drum_vae_with_ssm_html.ipynb
@@ -12183,7 +12332,7 @@ If you are interested in model detail, please refer to our paper.</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[NbConvertApp] Converting notebook drum_vae_with_ssm_html.ipynb to html
-[NbConvertApp] Writing 272276 bytes to drum_vae_with_ssm_html.html
+[NbConvertApp] Writing 277527 bytes to drum_vae_with_ssm_html.html
 </pre>
 </div>
 </div>
@@ -12194,7 +12343,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i &#39;remove_nb_input_cell.py&#39;
