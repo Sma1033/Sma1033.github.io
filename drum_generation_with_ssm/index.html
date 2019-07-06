@@ -12220,9 +12220,82 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generating-drum-track-for-real-world-audio">Generating drum track for real-world audio<a class="anchor-link" href="#Generating-drum-track-for-real-world-audio">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One of the goals of this project is to generate accompaniment drum track to support the rhythmicity part of a song for a solo player. Therefore, we test the capability of our model on random songs downloaded from youtube. The experimental result suggests that our model still have issues to generate consistent drum patterns within a musical section when applying on real-world audio domain data. We believe the cause of this is related to the large difference between real-world audio SSM and the symbolic one. How to shorten the gap between the two remains a challenging problem and needs more exploration.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+&lt;p class=&quot;sample&quot;&gt;
+    &amp;nbsp;
+    &lt;pre&gt;&lt;b&gt;      real-world audio sample 1           real-world audio sample 2 &lt;/b&gt;&lt;/pre&gt;
+    &lt;audio src=&quot;./audio/sample_rs07.wav&quot; controls=&quot;&quot; style=&quot;width: 270px;&quot;&gt;&lt;/audio&gt;
+    &lt;audio src=&quot;./audio/sample_rs08.wav&quot; controls=&quot;&quot; style=&quot;width: 270px;&quot;&gt;&lt;/audio&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    &lt;b&gt;&lt;em&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xIuryqXx7fY&quot; target=&quot;_blank&quot;&gt;source audio Youtube link&lt;/a&gt;&lt;/em&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    &lt;b&gt;&lt;em&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SrnCvD2OHlQ&quot; target=&quot;_blank&quot;&gt;source audio Youtube link&lt;/a&gt;&lt;/em&gt;&lt;/b&gt;
+&lt;/p&gt;
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<p class="sample">
+    &nbsp;
+    <pre><b>      real-world audio sample 1           real-world audio sample 2 </b></pre>
+    <audio src="./audio/sample_rs07.wav" controls="" style="width: 270px;"></audio>
+    <audio src="./audio/sample_rs08.wav" controls="" style="width: 270px;"></audio><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b><em><a href="https://www.youtube.com/watch?v=xIuryqXx7fY" target="_blank">source audio Youtube link</a></em></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b><em><a href="https://www.youtube.com/watch?v=SrnCvD2OHlQ" target="_blank">source audio Youtube link</a></em></b>
+</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#&lt;font size=&quot;1&quot;&gt; This is my text number 1&lt;/font&gt;&lt;br&gt;</span>
@@ -12240,7 +12313,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#wav_file = &quot;./testing_10_songs/test_wavs_cutted/test_song_01.wav&quot;</span>
@@ -12267,7 +12340,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#ipd.Audio(audio_data[:44100*5], rate=44100)</span>
@@ -12281,7 +12354,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#my_video = YouTubeVideo(&#39;FQw2CX6bn7Q&#39;)</span>
@@ -12294,7 +12367,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#display(my_video)</span>
@@ -12307,7 +12380,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert nb file into html</span>
@@ -12320,7 +12393,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --to html drum_vae_with_ssm_html.ipynb
@@ -12340,6 +12413,8 @@ If you are interested in model detail, please refer to our paper.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
+<pre>
+</pre>
 </div>
 </div>
 
@@ -12349,7 +12424,7 @@ If you are interested in model detail, please refer to our paper.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i &#39;remove_nb_input_cell.py&#39;
@@ -12369,6 +12444,8 @@ If you are interested in model detail, please refer to our paper.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
+<pre>
+</pre>
 </div>
 </div>
 
